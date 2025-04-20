@@ -1,4 +1,5 @@
 import "./App.css";
+import Button from "./components/Button";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         top players, and manage your personal favourites — all in one place.
         Dive into club details, add players, and build your dream list.
       </p>
+      <div className="relative z-10 pl-10 pt-10">
+        <Button text={"Explore Football Clubs"} to={"/"} />
+      </div>
     </main>
   );
 }
