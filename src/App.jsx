@@ -22,7 +22,7 @@ function App() {
         Dive into club details, add players, and build your dream list.
       </p>
       <div className="relative z-10 pl-10 pt-10">
-        <Button text={"Explore Football Clubs"} to={"/"} />
+        <Button text={"Explore Football Clubs"} to={"/clubs"} />
       </div>
     </main>
   );
