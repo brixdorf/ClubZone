@@ -8,10 +8,8 @@ const ClubDetails = () => {
   const [club, setClub] = useState(null);
 
   useEffect(() => {
-    // Find the club in the JSON data
     const decodedClubName = decodeURIComponent(clubName);
 
-    // Find exact match or partial match (case insensitive)
     const foundClub = clubDetailsData.clubsDetails.find(
       (c) =>
         c.name.toLowerCase() === decodedClubName.toLowerCase() ||
@@ -31,7 +29,7 @@ const ClubDetails = () => {
 
         <img
           src="/images/goal.jpg"
-          alt="Football Stadium"
+          alt="Goal"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
@@ -63,12 +61,9 @@ const ClubDetails = () => {
         <Navbar />
       </div>
 
-      {/* Content Container */}
       <div className="container mx-auto px-4 py-8">
-        {/* Club Header */}
-        <div className="bg-white bg-opacity-95 rounded-lg shadow-xl p-6 mb-8 md:p-8">
+        <div className="bg-white rounded-lg shadow-xl p-6 mb-8 md:p-8">
           <div className="flex flex-col md:flex-row items-center">
-            {/* Club Crest */}
             <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">
               <img
                 src={`/${club.crestImage}`}
@@ -77,7 +72,6 @@ const ClubDetails = () => {
               />
             </div>
 
-            {/* Club Info */}
             <div className="md:w-2/3 md:pl-10 text-center md:text-left">
               <h1 className="text-4xl font-bold font-[Montserrat] mb-4">
                 {club.name}
@@ -108,9 +102,7 @@ const ClubDetails = () => {
           </div>
         </div>
 
-        {/* Club Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          {/* Trophy Stats */}
           <div className="bg-white bg-opacity-95 rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-bold mb-6 text-center font-[Montserrat] border-b-2 border-indigo-200 pb-2">
               Club Achievements
@@ -151,8 +143,7 @@ const ClubDetails = () => {
             </div>
           </div>
 
-          {/* Stadium & Management */}
-          <div className="bg-white bg-opacity-95 rounded-lg shadow-lg p-6">
+          <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-bold mb-6 text-center font-[Montserrat] border-b-2 border-indigo-200 pb-2">
               Stadium & Management
             </h2>
@@ -203,8 +194,7 @@ const ClubDetails = () => {
           </div>
         </div>
 
-        {/* Squad */}
-        <div className="bg-white bg-opacity-95 rounded-lg shadow-xl p-6 mb-8">
+        <div className="bg-white rounded-lg shadow-xl p-6 mb-8">
           <h2 className="text-2xl font-bold mb-6 text-center font-[Montserrat] border-b-2 border-indigo-200 pb-2">
             Squad
           </h2>

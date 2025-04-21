@@ -8,23 +8,23 @@
 
 ## ✨ Features
 
-- Browse a collection of top football clubs with logos and league info  
-- View detailed club stats, stadium info, and current player lineup  
-- Mark and unmark favourite clubs (globally tracked with Context API)  
-- Dedicated **Favourites** page to view all marked clubs  
-- "Rate Your Favourite Club" form with full validation  
-- Responsive design for desktop and mobile  
-- Clean and modern UI using Tailwind CSS  
+- Browse a collection of top football clubs with logos and league info
+- View detailed club stats, stadium info, and current player lineup
+- Mark and unmark favourite clubs (globally tracked with Context API)
+- Dedicated **Favourites** page to view all marked clubs
+- "Rate Your Favourite Club" form with full validation
+- Responsive design for desktop and mobile
+- Clean and modern UI using Tailwind CSS
 - JSON-based local data (no external API needed)
 
 ---
 
 ## 🔧 Tech Stack
 
-- **React** (Vite)  
-- **React Router DOM**  
-- **Context API**  
-- **Tailwind CSS**  
+- **React** (Vite)
+- **React Router DOM**
+- **Context API**
+- **Tailwind CSS**
 - **Local JSON (mock data)**
 
 ---
