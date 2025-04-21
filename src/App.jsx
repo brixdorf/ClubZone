@@ -19,7 +19,7 @@ function App() {
       <p className="relative z-10 font-[Montserrat] text-white text-2xl font-medium pl-10 max-w-4xl pt-5">
         ClubZone is your all-in-one website to explore football clubs, discover
         top players, and manage your personal favourites — all in one place.
-        Dive into club details, add players, and build your dream list.
+        Dive into club details, rate clubs, and build your dream list.
       </p>
       <div className="relative z-10 pl-10 pt-10">
         <Button text={"Explore Football Clubs"} to={"/clubs"} />
