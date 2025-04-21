@@ -5,7 +5,7 @@ const Clubs = () => {
   return (
     <main className="relative min-h-screen">
       <div className="relative z-10 mb-0">
-        <Navbar/>
+        <Navbar />
       </div>
       <img
         src="images/kick.jpg"

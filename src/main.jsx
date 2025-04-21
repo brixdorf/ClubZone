@@ -5,6 +5,7 @@ import { FavouriteProvider } from "./context/FavouriteContext.jsx";
 import "./index.css";
 import App from "./App.jsx";
 import Clubs from "./pages/Clubs.jsx";
+import ClubDetails from "./pages/ClubDetails";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/clubs" element={<Clubs />} />
+          <Route path="/clubs/:clubName" element={<ClubDetails />} />
         </Routes>
       </FavouriteProvider>
     </BrowserRouter>
