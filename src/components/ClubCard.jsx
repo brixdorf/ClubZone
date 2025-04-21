@@ -25,7 +25,7 @@ const ClubCard = ({
       <div className="p-6 relative">
         <button
           onClick={() => toggleFavourite(name)}
-          className="absolute top-5 right-5 text-2xl"
+          className="absolute top-5 right-4 text-2xl"
         >
           {fav ? (
             <span className="text-red-500">♥</span>

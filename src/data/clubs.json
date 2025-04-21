@@ -1,0 +1,52 @@
+{
+  "clubs": [
+    {
+      "name": "Barcelona",
+      "crestImage": "images/barcelona.svg",
+      "leagueName": "La Liga",
+      "leagueLogo": "images/laliga.svg",
+      "country": "Spain",
+      "countryFlag": "images/spain.svg"
+    },
+    {
+      "name": "Arsenal",
+      "crestImage": "images/arsenal.svg",
+      "leagueName": "Premier League",
+      "leagueLogo": "images/premier_league.svg",
+      "country": "England",
+      "countryFlag": "images/england.svg"
+    },
+    {
+      "name": "AC Milan",
+      "crestImage": "images/ac_milan.svg",
+      "leagueName": "Serie A",
+      "leagueLogo": "images/serie_a.svg",
+      "country": "Italy",
+      "countryFlag": "images/italy.svg"
+    },
+    {
+      "name": "Paris Saint-Germain",
+      "crestImage": "images/psg.svg",
+      "leagueName": "Ligue 1",
+      "leagueLogo": "images/ligue_1.svg",
+      "country": "France",
+      "countryFlag": "images/france.svg"
+    },
+    {
+      "name": "Real Madrid",
+      "crestImage": "images/real_madrid.svg",
+      "leagueName": "La Liga",
+      "leagueLogo": "images/laliga.svg",
+      "country": "Spain",
+      "countryFlag": "images/spain.svg"
+    },
+    {
+      "name": "Bayern Munich",
+      "crestImage": "images/bayern_munich.svg",
+      "leagueName": "Bundesliga",
+      "leagueLogo": "images/bundesliga.svg",
+      "country": "Germany",
+      "countryFlag": "images/germany.svg"
+    }
+  ]
+}
