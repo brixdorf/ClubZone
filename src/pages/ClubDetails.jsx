@@ -121,8 +121,8 @@ const ClubDetails = () => {
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-700 flex items-center justify-center">
                   <img 
-                    src="/images/champions_league.svg" 
-                    alt="Champions League Trophy" 
+                    src="/images/trophy.svg" 
+                    alt="" 
                     className="inline-block w-8 h-8 mr-1"
                   />
                   {club.uclTitles}
