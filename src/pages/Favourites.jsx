@@ -25,7 +25,7 @@ const Favourites = () => {
 
       <div className="relative z-10 container mx-auto px-6 py-12">
         <div className="flex justify-center mb-8">
-          <h1 className="text-5xl font-bold text-white font-[Montserrat] bg-black py-2 px-8 rounded">
+          <h1 className="text-5xl font-bold text-white font-[Montserrat] bg-black py-2 px-8 rounded inline-block">
             My Favourite Clubs
           </h1>
         </div>
