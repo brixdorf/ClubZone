@@ -23,15 +23,15 @@ const Favourites = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      <div className="relative z-10 container mx-auto px-6 py-12">
-        <div className="flex justify-center mb-8">
-          <h1 className="text-5xl font-bold text-white font-[Montserrat] bg-black py-2 px-8 rounded inline-block">
+      <div className="relative z-10 container mx-auto px-4 py-8 sm:py-12">
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-[Montserrat] bg-black py-2 px-4 sm:px-8 rounded inline-block">
             My Favourite Clubs
           </h1>
         </div>
 
         {favouriteClubs.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {favouriteClubs.map((club, index) => (
               <div key={index} className="flex justify-center">
                 <ClubCard
@@ -46,9 +46,9 @@ const Favourites = () => {
             ))}
           </div>
         ) : (
-          <div className="bg-white bg-opacity-90 rounded-lg p-8 max-w-2xl mx-auto text-center">
-            <div className="text-6xl mb-4">💔</div>
-            <h2 className="text-2xl font-bold mb-4 font-[Montserrat] text-gray-800">
+          <div className="bg-white bg-opacity-90 rounded-lg p-6 sm:p-8 max-w-2xl mx-auto text-center">
+            <div className="text-5xl sm:text-6xl mb-4">💔</div>
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-[Montserrat] text-gray-800">
               No Favourite Clubs Yet
             </h2>
             <p className="text-gray-600 mb-6 font-[Montserrat]">
@@ -58,7 +58,7 @@ const Favourites = () => {
             </p>
             <Link
               to="/clubs"
-              className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 font-[Montserrat]"
+              className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition duration-300 font-[Montserrat]"
             >
               Explore Clubs
             </Link>
