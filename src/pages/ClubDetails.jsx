@@ -10,29 +10,40 @@ const ClubDetails = () => {
   useEffect(() => {
     // Find the club in the JSON data
     const decodedClubName = decodeURIComponent(clubName);
-    
+
     // Find exact match or partial match (case insensitive)
     const foundClub = clubDetailsData.clubsDetails.find(
-      (c) => c.name.toLowerCase() === decodedClubName.toLowerCase() || 
-             c.name.toLowerCase().includes(decodedClubName.toLowerCase()) ||
-             decodedClubName.toLowerCase().includes(c.name.toLowerCase())
+      (c) =>
+        c.name.toLowerCase() === decodedClubName.toLowerCase() ||
+        c.name.toLowerCase().includes(decodedClubName.toLowerCase()) ||
+        decodedClubName.toLowerCase().includes(c.name.toLowerCase())
     );
-    
+
     setClub(foundClub);
   }, [clubName]);
 
   if (!club) {
     return (
-      <div>
-        <Navbar />
-        <div className="container mx-auto py-16 px-4 text-center">
+      <div className="relative min-h-screen">
+        <div className="relative z-10">
+          <Navbar />
+        </div>
+
+        <img
+          src="/images/goal.jpg"
+          alt="Football Stadium"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <div className="container mx-auto py-16 px-4 text-center relative z-10">
           <div className="bg-white p-8 rounded-lg shadow-md max-w-xl mx-auto">
             <div className="text-6xl mb-4">🔍</div>
             <h2 className="text-2xl font-bold text-red-600 font-[Montserrat] mb-4">
               Club not found
             </h2>
             <p className="text-gray-700 mb-6 font-[Montserrat]">
-              We couldn't find detailed information about "{decodeURIComponent(clubName)}".
+              We couldn't find detailed information about "
+              {decodeURIComponent(clubName)}".
             </p>
             <Link
               to="/clubs"
@@ -59,23 +70,23 @@ const ClubDetails = () => {
           <div className="flex flex-col md:flex-row items-center">
             {/* Club Crest */}
             <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">
-              <img 
-                src={`/${club.crestImage}`} 
-                alt={`${club.name} crest`} 
+              <img
+                src={`/${club.crestImage}`}
+                alt={`${club.name} crest`}
                 className="h-48 w-auto"
               />
             </div>
-            
+
             {/* Club Info */}
             <div className="md:w-2/3 md:pl-10 text-center md:text-left">
               <h1 className="text-4xl font-bold font-[Montserrat] mb-4">
                 {club.name}
               </h1>
-              
+
               <p className="italic text-indigo-800 font-medium mb-4">
                 "{club.motto}"
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <span className="text-gray-600">Founded:</span>{" "}
@@ -84,17 +95,15 @@ const ClubDetails = () => {
                 <div className="flex items-center justify-center md:justify-start">
                   <span className="text-gray-600 mr-2">Country:</span>{" "}
                   <span className="font-semibold">{club.country}</span>
-                  <img 
-                    src={`/images/${club.country.toLowerCase()}.svg`} 
-                    alt={club.country} 
-                    className="h-5 ml-2" 
+                  <img
+                    src={`/images/${club.country.toLowerCase()}.svg`}
+                    alt={club.country}
+                    className="h-5 ml-2"
                   />
                 </div>
               </div>
-              
-              <p className="text-gray-700">
-                {club.description}
-              </p>
+
+              <p className="text-gray-700">{club.description}</p>
             </div>
           </div>
         </div>
@@ -111,25 +120,33 @@ const ClubDetails = () => {
                 <div className="text-4xl font-bold text-indigo-700">
                   {club.totalTrophies}
                 </div>
-                <div className="text-gray-600 font-[Montserrat]">Total Trophies</div>
+                <div className="text-gray-600 font-[Montserrat]">
+                  Total Trophies
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-700">
                   {club.uclTitles}
                 </div>
-                <div className="text-gray-600 font-[Montserrat]">Champions League</div>
+                <div className="text-gray-600 font-[Montserrat]">
+                  Champions League
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-700">
                   {club.leagueTitles}
                 </div>
-                <div className="text-gray-600 font-[Montserrat]">League Titles</div>
+                <div className="text-gray-600 font-[Montserrat]">
+                  League Titles
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-700">
                   {club.cupTitles}
                 </div>
-                <div className="text-gray-600 font-[Montserrat]">Cup Titles</div>
+                <div className="text-gray-600 font-[Montserrat]">
+                  Cup Titles
+                </div>
               </div>
             </div>
           </div>
@@ -141,8 +158,12 @@ const ClubDetails = () => {
             </h2>
             <div className="mb-4">
               <div className="text-center mb-4">
-                <div className="text-xl font-bold text-indigo-700">{club.stadium}</div>
-                <div className="text-gray-600">Capacity: {club.capacity.toLocaleString()} seats</div>
+                <div className="text-xl font-bold text-indigo-700">
+                  {club.stadium}
+                </div>
+                <div className="text-gray-600">
+                  Capacity: {club.capacity.toLocaleString()} seats
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 mt-6">
@@ -156,15 +177,26 @@ const ClubDetails = () => {
               </div>
             </div>
             <div className="text-center mt-6">
-              <a 
-                href={club.website} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={club.website}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition duration-300"
               >
                 <span>Official Website</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </a>
             </div>
@@ -176,7 +208,7 @@ const ClubDetails = () => {
           <h2 className="text-2xl font-bold mb-6 text-center font-[Montserrat] border-b-2 border-indigo-200 pb-2">
             Squad
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.entries(club.players).map(([position, players]) => (
               <div key={position} className="bg-gray-100 rounded-lg p-4">
@@ -185,7 +217,10 @@ const ClubDetails = () => {
                 </h3>
                 <ul className="space-y-1">
                   {players.map((player, idx) => (
-                    <li key={idx} className="border-b border-gray-200 last:border-0 py-1 text-center">
+                    <li
+                      key={idx}
+                      className="border-b border-gray-200 last:border-0 py-1 text-center"
+                    >
                       {player}
                     </li>
                   ))}
