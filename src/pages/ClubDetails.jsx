@@ -108,45 +108,25 @@ const ClubDetails = () => {
             </h2>
             <div className="grid grid-cols-2 gap-y-6">
               <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-700 flex items-center justify-center">
-                  <img 
-                    src="/images/trophy.svg" 
-                    alt="Total Trophy" 
-                    className="inline-block w-6 h-6 mr-1"
-                  />
+                <div className="text-4xl font-bold text-indigo-700">
                   {club.totalTrophies}
                 </div>
                 <div className="text-gray-600 font-[Montserrat]">Total Trophies</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-700 flex items-center justify-center">
-                  <img 
-                    src="/images/trophy.svg" 
-                    alt="" 
-                    className="inline-block w-8 h-8 mr-1"
-                  />
+                <div className="text-4xl font-bold text-indigo-700">
                   {club.uclTitles}
                 </div>
                 <div className="text-gray-600 font-[Montserrat]">Champions League</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-700 flex items-center justify-center">
-                  <img 
-                    src={`/${club.leagueTitleIcon}`} 
-                    alt="League Trophy" 
-                    className="inline-block w-6 h-6 mr-1"
-                  />
+                <div className="text-4xl font-bold text-indigo-700">
                   {club.leagueTitles}
                 </div>
                 <div className="text-gray-600 font-[Montserrat]">League Titles</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-700 flex items-center justify-center">
-                  <img 
-                    src={`/${club.cupTitleIcon}`} 
-                    alt="Cup Trophy" 
-                    className="inline-block w-6 h-6 mr-1"
-                  />
+                <div className="text-4xl font-bold text-indigo-700">
                   {club.cupTitles}
                 </div>
                 <div className="text-gray-600 font-[Montserrat]">Cup Titles</div>
